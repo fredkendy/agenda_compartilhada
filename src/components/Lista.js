@@ -15,6 +15,7 @@ export default function Lista(props) {
       .ref('/contatos')
       .once('value')
       .then(snapshot => {
+        //pegando todos nossos contatos para apresentar dinamicamente
         const contatos = Object.values(snapshot.val())
         console.log('User data: ', snapshot.val());
         setListaContatos(contatos);
